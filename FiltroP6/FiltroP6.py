@@ -1,3 +1,4 @@
+#Programa que muestra el histograma de cada una de las imagenes y antes y despues de ecualizarla.
 import cv2
 import numpy as np
 
@@ -17,7 +18,9 @@ while True:
 
     elif modo.startswith('hsv'):
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+        
 #Eleccion de Modo de filtro
+
         if modo == 'hsv_red':
             lower_red1 = np.array([0, 120, 70])
             upper_red1 = np.array([10, 255, 255])
